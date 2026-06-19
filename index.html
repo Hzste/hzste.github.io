@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clipworth | Get paid for the views</title>
+  <meta name="description" content="Clipworth pays creators for the views their TikTok clips get. Post for the artists you love and earn from every view, banked the moment it lands." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Clipworth | Get paid for the views" />
+  <meta property="og:description" content="Post TikTok clips for artists. Earn per view. Banked the moment it lands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta name="theme-color" content="#06110D" />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;450;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient layers -->
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Clipworth home">
+      <img src="assets/logo.png" alt="" class="brand-mark" />
+      <span class="brand-name">Clipworth</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#how">How It Works</a>
+      <a href="#fairness">The Pot</a>
+      <a href="#artists">For Artists</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#" data-discord class="btn btn-solid">Join Discord</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><span class="dot"></span>Get paid per view</span>
+        <h1 class="display">Your clips are<br/>worth <span class="grad">something.</span></h1>
+        <p class="lede">
+          Clipworth pays you for the views your edits pull in. Pick an artist's
+          campaign, edit to its niche, and earn from every view.
+          <strong>Banked the moment it lands</strong>, and it never drops.
+        </p>
+        <div class="hero-actions">
+          <a href="#" data-discord class="btn btn-solid btn-lg">Start clipping</a>
+          <a href="#artists" class="btn btn-line btn-lg">I'm an artist</a>
+        </div>
+        <div class="hero-trust">
+          <span>Free to join</span><i></i><span>Paid in real money</span><i></i><span>PayPal payouts</span>
+        </div>
+      </div>
+
+      <!-- Signature: live earnings demo -->
+      <div class="hero-demo reveal" data-tilt>
+        <div class="demo" id="demo">
+          <div class="demo-head">
+            <span class="demo-live"><span class="pulse"></span>Live demo</span>
+            <span class="demo-hint">drag to add views</span>
+          </div>
+          <div class="demo-clip">
+            <div class="demo-thumb" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            </div>
+            <div class="demo-clip-meta">
+              <div class="demo-clip-title">your edit · <span class="muted">romance</span></div>
+              <div class="demo-views"><span id="viewNum" class="mono">0</span> <span class="muted">views</span></div>
+            </div>
+          </div>
+          <input type="range" id="viewSlider" class="slider" min="0" max="1500000" value="750000" step="1000" aria-label="Views on your clip" />
+          <div class="demo-earn">
+            <div>
+              <div class="earn-label">You've banked</div>
+              <div class="earn-amount mono">$<span id="earnNum">0</span></div>
+            </div>
+            <div class="earn-rate mono">$1.00 / 1k views</div>
+          </div>
+          <div class="pot">
+            <div class="pot-track"><span id="potFill" class="pot-fill"></span></div>
+            <div class="pot-label">
+              <span id="potText" class="mono">$0 of $1,000 per clip</span>
+              <span class="muted">from a $5,000 pot</span>
+            </div>
+          </div>
+        </div>
+        <div class="demo-foot mono">paid per view • banked, never drops • cash out to PayPal</div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how" id="how">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span>For editors</span>
+        <h2 class="display">Three steps to your first payout.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-no mono">01</span>
+          <h3>Link your TikTok</h3>
+          <p>Verify your account in the Discord in seconds. Add up to <strong>3 accounts</strong> and drop in your PayPal.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-no mono">02</span>
+          <h3>Edit to the niche</h3>
+          <p>Pick a campaign and its niche (romance, celeb, anime, whatever the artist wants), make your edit, post it, then submit the link.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-no mono">03</span>
+          <h3>Get paid per view</h3>
+          <p>We track your views every 2 hours and bank your earnings as they grow. Cash out to PayPal.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- The pot / fairness -->
+    <section class="fairness" id="fairness">
+      <div class="fairness-copy reveal">
+        <span class="eyebrow"><span class="dot"></span>The fair part</span>
+        <h2 class="display">Earnings that only ever go <span class="grad">up.</span></h2>
+        <p class="lede">
+          Every campaign has a pot. You earn from it first-come, first-served.
+          Once an earning is <strong>banked, it's locked.</strong> No watching
+          your payout shrink because someone posted after you.
+        </p>
+        <ul class="ticks">
+          <li>Bank earnings as your views climb, and they never drop.</li>
+          <li>Hit the pot's ceiling? Only the newest views share what's left.</li>
+          <li>Every clip capped per video, so no one drains the pot.</li>
+        </ul>
+      </div>
+      <div class="fairness-card reveal" data-tilt>
+        <div class="bank-row">
+          <span class="bank-name mono">You</span>
+          <span class="bank-bar"><span style="width:78%"></span></span>
+          <span class="bank-val mono gold">$550 <span class="lock">🔒</span></span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-name mono">Joined later</span>
+          <span class="bank-bar"><span style="width:36%"></span></span>
+          <span class="bank-val mono">$245</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-name mono">Joined last</span>
+          <span class="bank-bar"><span style="width:24%"></span></span>
+          <span class="bank-val mono">$164</span>
+        </div>
+        <div class="bank-foot mono">your $550 stays put, newcomers split the rest.</div>
+      </div>
+    </section>
+
+    <!-- Facts band -->
+    <section class="facts reveal">
+      <div class="fact"><span class="fact-num mono">3</span><span class="fact-lbl">TikTok accounts each</span></div>
+      <div class="fact"><span class="fact-num mono">2h</span><span class="fact-lbl">views refreshed</span></div>
+      <div class="fact"><span class="fact-num mono">PayPal</span><span class="fact-lbl">real payouts</span></div>
+      <div class="fact"><span class="fact-num mono">0%</span><span class="fact-lbl">fees to join</span></div>
+    </section>
+
+    <!-- For artists -->
+    <section class="artists" id="artists">
+      <div class="artists-inner reveal">
+        <div class="artists-copy">
+          <span class="eyebrow"><span class="dot"></span>For artists &amp; labels</span>
+          <h2 class="display">Get your sound owned by a niche.</h2>
+          <p class="lede">
+            Hand your audio to <strong>real editors</strong> and pick a lane
+            (romance, celeb, anime, gym) so your track gets recognised with that
+            aesthetic. Or leave it open to any style. You set the budget and pay
+            only for the views you get.
+          </p>
+          <ul class="ticks">
+            <li>Real editors making real edits, not low-effort audio drops.</li>
+            <li>Approve every clip before a cent is spent.</li>
+            <li>Pay strictly per view, capped to your budget.</li>
+            <li>Live dashboards for spend, views and top editors.</li>
+          </ul>
+        </div>
+        <div class="enquiry">
+          <h3>Start a campaign</h3>
+          <p class="enquiry-sub">It all runs through our Discord. No emails back and forth.</p>
+          <ol class="enquiry-steps">
+            <li>Join the Clipworth Discord.</li>
+            <li>Open a ticket in the tickets channel.</li>
+            <li>Tell us your track, niche and budget, and we'll set up your campaign.</li>
+          </ol>
+          <a href="#" data-discord class="btn btn-solid btn-block">Join Discord to start</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta reveal">
+      <img src="assets/logo.png" alt="" class="cta-mark" />
+      <h2 class="display">Turn your views into <span class="grad">income.</span></h2>
+      <p class="lede">Join the Discord, link your TikTok, and post your first clip today.</p>
+      <a href="#" data-discord class="btn btn-solid btn-lg">Join the Discord</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="" class="brand-mark" />
+      <span class="brand-name">Clipworth</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#how">How it works</a>
+      <a href="#artists">For artists</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="#" data-discord>Discord</a>
+    </nav>
+    <p class="footer-fine">© <span id="year">2026</span> Clipworth. Not affiliated with TikTok or PayPal.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
