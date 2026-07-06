@@ -50,8 +50,8 @@
     var potText = document.getElementById("potText");
     if (!slider) return;
 
-    var CPM = 1;             // $ per 1,000 views
-    var MAX_PAYOUT = 1000;   // per-clip cap (aspirational, from a bigger pot)
+    var CPM = 0.5;           // $ per 1,000 views (launch rate)
+    var MAX_PAYOUT = 500;    // per-edit cap, matches live campaigns
     var SLIDER_MAX = parseInt(slider.max, 10);
 
     var displayed = 0;                          // animated number (eases up)
@@ -64,7 +64,7 @@
       viewNum.textContent = fmt(v);
       earnNum.textContent = earn.toFixed(2);
       potFill.style.width = Math.min(100, (earn / MAX_PAYOUT) * 100).toFixed(1) + "%";
-      potText.textContent = "$" + Math.round(earn).toLocaleString("en-US") + " of $1,000 per clip";
+      potText.textContent = "$" + Math.round(earn).toLocaleString("en-US") + " of $500 per edit";
       slider.style.backgroundSize = ((sv / SLIDER_MAX) * 100).toFixed(1) + "% 100%";
     }
 
